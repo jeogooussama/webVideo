@@ -115,7 +115,7 @@ function App() {
   }
 
   useEffect(() => {
-    socket.current = io.connect(
+    socket = io.connect(
       serviceIP,
       {
         path: '/io/webrtc',

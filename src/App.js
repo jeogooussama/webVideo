@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client'
 import Video from './components/video'
 import Videos from './components/videos'
+import "./App.css"
 
 function App() {
   const [localStream, setLocalStream] = useState(null);
@@ -114,7 +115,7 @@ function App() {
   }
 
   useEffect(() => {
-    socket = io.connect(
+    socket.current = io.connect(
       serviceIP,
       {
         path: '/io/webrtc',
@@ -255,4 +256,4 @@ function App() {
   )
 }
 
-export default App;    
+export default App;  

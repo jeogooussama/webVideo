@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 function Video(props) {
   const [videoRef, setVideoRef] = useState(null);
 

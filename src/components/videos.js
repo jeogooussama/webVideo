@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Video from './video';
-
 function Videos(props) {
   const [rVideos, setRVideos] = useState([]);
   const [remoteStreams, setRemoteStreams] = useState([]);
@@ -37,7 +36,7 @@ function Videos(props) {
       setRVideos(_rVideos);
       setRemoteStreams(props.remoteStreams);
     }
-  }, [ props,props.remoteStreams,remoteStreams, props.switchVideo]);
+  }, [props, props.remoteStreams, remoteStreams, props.switchVideo]);
 
   return (
     <div
